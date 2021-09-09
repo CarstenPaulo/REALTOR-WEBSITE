@@ -1,0 +1,119 @@
+{% load static %}
+<section>
+    <footer style="background-color: #081423;">
+        <div class="container mt-4">
+            <div class="row ">
+                <!-- Imobiliaria-->
+                <div class="col-md-3 text-white">
+                    <h4 class=" mt-4">Imobiliária</h4>
+                    <div style="border: #25d366 1px solid; width: 60px; margin: 10px 0 20px 0;" class="separador"></div>
+                    <div class="conteudo">
+                        <p><b>Horário de Atendimento:</b><br>
+                            <i class="fa fa-calendar-check-o"></i> 08:00 AM<br>
+                            <i class="fa fa-calendar-minus-o"></i> 18:00 PM
+                            <p>
+                                Juliano Pessoa Creci-SC: 033066
+                                <br> Douglas Souza Creci-SC: 033066
+                            </p>
+                        </p>
+                        <!-- <p class="small">Lembramos: Nosso horário de check in é até às 20h30; necessitando chegar após este horário favor combinar antecipadamente para evitar transtornos.</p> -->
+                        <p class="small">IMPORTANTE: Horários de finais de semanas, deve serem agendados anteriormente por telefone.</p>
+                    </div>
+                </div>
+
+                <!-- Explorar -->
+                <div class="col-md-3 text-white">
+                    <h4 class=" mt-4">Explorar</h4>
+                    <div style="border: #25d366 1px solid; width: 60px; margin: 10px 0 20px 0;" class="separador"></div>
+                    <li><a class="text-white" href="{% url 'index' %}">Home</a></li>
+                    <li> <a class="text-white" href="{% url 'listar' %}">Imóveis</a></li>
+                    <li> <a class="text-white" href="{% url 'sobre' %}">Sobre</a> </li>
+                    <li> <a class="text-white" href="{% url 'faleconosco' %}">Fale Conosco</a> </li>
+                    <li> <a class="text-white" href="{% url 'anuncieaqui' %}">Anuncie Aqui</a> </li>
+                </div>
+
+                <!-- Contato-->
+                <div class="col-md-3 text-white">
+                    <h4 class="mt-4">Contato</h4>
+                    <div style="border: #25d366 1px solid; width: 60px; margin: 10px 0 20px 0;" class="separador"></div>
+                    <div class="sconteudo footer_contato">
+                        <!-- Localização -->
+                        <div class="box box-sidebar"><i class="fa fa-map-marker"></i>
+                            <div style="display: inline-block;" class="box box-content  font-weight-bold">
+                                <p>
+                                    URUBICI – SC /CEP 88650-000
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Telefone -->
+                        <div class="box box-sidebar"><i class="fa fa-phone"></i>
+                            <div style="display: inline-block;" class="box box-content  font-weight-bold">
+                                <p>
+                                    (49) 9 9999-9999 testando
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Whatsapp -->
+                        <div class="box box-sidebar"><i class="fa fa-whatsapp"></i>
+                            <div style="display: inline-block;" class="box box-content  font-weight-bold">
+                                <p>
+                                    Juliano-(49) 9.8403.1065
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box box-sidebar"><i class="fa fa-whatsapp"></i>
+                            <div style="display: inline-block;" class="box box-content  font-weight-bold">
+                                <p>
+                                    Douglas-(49) 99187-7867
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="box box-sidebar"><i class="fa fa-envelope"></i>
+                            <div style="display: inline-block;" class="box box-content  font-weight-bold">
+                                <p>
+                                    corvobrancoimoveis@gmail.com.br
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Redes Sociais-->
+                <div class="col-md-3 text-white">
+                    <h4 class=" mt-4">Redes Sociais</h4>
+                    <div style="border: #25d366 1px solid; width: 60px; margin: 10px 0 20px 0;" class="separador"></div>
+                    <div class="social_footer text-center">
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <br>
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/corvobrancoimoveis/" role="button"><i
+                                class="fab fa-instagram"></i></a>
+                        <br>
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://www.youtube.com/channel/UCzU8H25rSR--B2rVyMgjZag" role="button"><i
+                                class="fa fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr style="background-color: white;">
+            <div class="row">
+
+                <div class="col-md-10">
+                    <div class="text-white small">
+                        © 2021 - 2022 | Todos os direitos reservados a Imobiliária Corvo Branco.
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="text-white small">
+                        Desenvolvido por: <a href="https://www.carstenpaulo.com/">Carsten</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+</section>

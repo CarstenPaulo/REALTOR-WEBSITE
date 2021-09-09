@@ -1,0 +1,383 @@
+{% load static %}
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+
+
+
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="carousel-caption trickcenter">
+                <!-- Showcase -->
+                <section id="showcase">
+                    <div class="container text-center bg-dark p-3">
+                        <div class="home-search">
+                            <div class="overlay py-2">
+                                <h1 class="display-4">
+                                    Encontre aqui o imóvel que você precisa em Urubici e região!
+                                </h1>
+                                <br>
+                                <p class="lead">Transformando seus sonhos em realidade!</p>
+                                <div class="search">
+                                    <form action="{% url 'pesquisar' %}">
+                                        <!-- Form Row 1 -->
+                                        <div class="form-row">
+                                            <div class="col-md-4 mb-3">
+                                                <label class="sr-only">Palavras Chaves</label>
+                                                <input type="text" name="keywords" class="form-control"
+                                                    placeholder="Palavras Chaves (Chácara, Hectares, etc)">
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label class="sr-only">Cidade</label>
+                                                <input type="text" name="cidade" class="form-control"
+                                                    placeholder="Cidade">
+                                            </div>
+
+                                            <div class="col-md-4 mb-3">
+                                                <label class="sr-only">Preço</label>
+                                                <select name="preco" class="form-control">
+                                                    <option selected="true" disabled="disabled">Preço Máximo
+                                                    </option>
+                                                    {% for key,value in escolhas_precos.items %}
+                                                    <option value="{{key}}">
+                                                        {{value}}
+                                                    </option>
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-success btn-block mt-3" type="submit">Pesquisar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <img class="d-block w-100" src="{% static 'img/showcase.jpg' %}" height="530" alt="First slide">
+        </div>
+
+
+        <div class="carousel-item">
+            <div class="carousel-caption trickcenter">
+                <!-- Showcase -->
+                <section id="showcase">
+                    <div class="container text-center bg-dark p-3">
+                        <div class="home-search">
+                            <div class="overlay py-2">
+                                <h1 class="display-4">
+                                    Encontre aqui o imóvel que você precisa em Urubici e região!
+                                </h1>
+                                <br>
+                                <p class="lead">Transformando seus sonhos em realidade!</p>
+                                <div class="search">
+                                    <form action="{% url 'pesquisar' %}">
+                                        <!-- Form Row 1 -->
+                                        <div class="form-row">
+                                            <div class="col-md-4 mb-3">
+                                                <label class="sr-only">Palavras Chaves</label>
+                                                <input type="text" name="keywords" class="form-control"
+                                                    placeholder="Palavras Chaves (Chácara, Hectares, etc)">
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label class="sr-only">Cidade</label>
+                                                <input type="text" name="cidade" class="form-control"
+                                                    placeholder="Cidade">
+                                            </div>
+
+                                            <div class="col-md-4 mb-3">
+                                                <label class="sr-only">Preço</label>
+                                                <select name="preco" class="form-control">
+                                                    <option selected="true" disabled="disabled">Preço Máximo
+                                                    </option>
+                                                    {% for key,value in escolhas_precos.items %}
+                                                    <option value="{{key}}">
+                                                        {{value}}
+                                                    </option>
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-success btn-block mt-3" type="submit">Pesquisar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <img class="d-block w-100" src="{% static 'img/showcase.jpg' %}" height="530" alt="Second slide">
+        </div>
+
+        <div class="carousel-item">
+            <div class="carousel-caption trickcenter">
+                <!-- Showcase -->
+                <section id="showcase">
+                    <div class="container text-center bg-dark p-3">
+                        <div class="home-search">
+                            <div class="overlay py-2">
+                                <h1 class="display-4">
+                                    Encontre aqui o imóvel que você precisa em Urubici e região!
+                                </h1>
+                                <br>
+                                <p class="lead">Transformando seus sonhos em realidade!</p>
+                                <div class="search">
+                                    <form action="{% url 'pesquisar' %}">
+                                        <!-- Form Row 1 -->
+                                        <div class="form-row">
+                                            <div class="col-md-4 mb-3">
+                                                <label class="sr-only">Palavras Chaves</label>
+                                                <input type="text" name="keywords" class="form-control"
+                                                    placeholder="Palavras Chaves (Chácara, Hectares, etc)">
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label class="sr-only">Cidade</label>
+                                                <input type="text" name="cidade" class="form-control"
+                                                    placeholder="Cidade">
+                                            </div>
+
+                                            <div class="col-md-4 mb-3">
+                                                <label class="sr-only">Preço</label>
+                                                <select name="preco" class="form-control">
+                                                    <option selected="true" disabled="disabled">Preço Máximo
+                                                    </option>
+                                                    {% for key,value in escolhas_precos.items %}
+                                                    <option value="{{key}}">
+                                                        {{value}}
+                                                    </option>
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-success btn-block mt-3" type="submit">Pesquisar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <img class="d-block w-100" src="{% static 'img/showcase.jpg' %}" height="530" alt="Third slide">
+        </div>
+
+        <div class="carousel-item">
+            <div class="carousel-caption trickcenter">
+                <!-- Showcase -->
+                <section id="showcase">
+                    <div class="container text-center bg-dark p-3">
+                        <div class="home-search">
+                            <div class="overlay py-2">
+                                <h1 class="display-4">
+                                    Encontre aqui o imóvel que você precisa em Urubici e região!
+                                </h1>
+                                <br>
+                                <p class="lead">Transformando seus sonhos em realidade!</p>
+                                <div class="search">
+                                    <form action="{% url 'pesquisar' %}">
+                                        <!-- Form Row 1 -->
+                                        <div class="form-row">
+                                            <div class="col-md-4 mb-3">
+                                                <label class="sr-only">Palavras Chaves</label>
+                                                <input type="text" name="keywords" class="form-control"
+                                                    placeholder="Palavras Chaves (Chácara, Hectares, etc)">
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label class="sr-only">Cidade</label>
+                                                <input type="text" name="cidade" class="form-control"
+                                                    placeholder="Cidade">
+                                            </div>
+
+                                            <div class="col-md-4 mb-3">
+                                                <label class="sr-only">Preço</label>
+                                                <select name="preco" class="form-control">
+                                                    <option selected="true" disabled="disabled">Preço Máximo
+                                                    </option>
+                                                    {% for key,value in escolhas_precos.items %}
+                                                    <option value="{{key}}">
+                                                        {{value}}
+                                                    </option>
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-success btn-block mt-3" type="submit">Pesquisar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <img class="d-block w-100" src="{% static 'img/showcase.jpg' %}" height="530" alt="Fourth slide">
+        </div>
+
+        <div class="carousel-item">
+            <div class="carousel-caption trickcenter">
+                <!-- Showcase -->
+                <section id="showcase">
+                    <div class="container text-center bg-dark p-3">
+                        <div class="home-search">
+                            <div class="overlay py-2">
+                                <h1 class="display-4">
+                                    Encontre aqui o imóvel que você precisa em Urubici e região!
+                                </h1>
+                                <br>
+                                <p class="lead">Transformando seus sonhos em realidade!</p>
+                                <div class="search">
+                                    <form action="{% url 'pesquisar' %}">
+                                        <!-- Form Row 1 -->
+                                        <div class="form-row">
+                                            <div class="col-md-4 mb-3">
+                                                <label class="sr-only">Palavras Chaves</label>
+                                                <input type="text" name="keywords" class="form-control"
+                                                    placeholder="Palavras Chaves (Chácara, Hectares, etc)">
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label class="sr-only">Cidade</label>
+                                                <input type="text" name="cidade" class="form-control"
+                                                    placeholder="Cidade">
+                                            </div>
+
+                                            <div class="col-md-4 mb-3">
+                                                <label class="sr-only">Preço</label>
+                                                <select name="preco" class="form-control">
+                                                    <option selected="true" disabled="disabled">Preço Máximo
+                                                    </option>
+                                                    {% for key,value in escolhas_precos.items %}
+                                                    <option value="{{key}}">
+                                                        {{value}}
+                                                    </option>
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-success btn-block mt-3" type="submit">Pesquisar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <img class="d-block w-100" src="{% static 'img/showcase.jpg' %}" height="530" alt="Fifth slide">
+        </div>
+
+        <div class="carousel-item">
+            <div class="carousel-caption trickcenter">
+                <!-- Showcase -->
+                <section id="showcase">
+                    <div class="container text-center bg-dark p-3">
+                        <div class="home-search">
+                            <div class="overlay py-2">
+                                <h1 class="display-4">
+                                    Encontre aqui o imóvel que você precisa em Urubici e região!
+                                </h1>
+                                <br>
+                                <p class="lead">Transformando seus sonhos em realidade!</p>
+                                <div class="search">
+                                    <form action="{% url 'pesquisar' %}">
+                                        <!-- Form Row 1 -->
+                                        <div class="form-row">
+                                            <div class="col-md-4 mb-3">
+                                                <label class="sr-only">Palavras Chaves</label>
+                                                <input type="text" name="keywords" class="form-control"
+                                                    placeholder="Palavras Chaves (Chácara, Hectares, etc)">
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label class="sr-only">Cidade</label>
+                                                <input type="text" name="cidade" class="form-control"
+                                                    placeholder="Cidade">
+                                            </div>
+
+                                            <div class="col-md-4 mb-3">
+                                                <label class="sr-only">Preço</label>
+                                                <select name="preco" class="form-control">
+                                                    <option selected="true" disabled="disabled">Preço Máximo
+                                                    </option>
+                                                    {% for key,value in escolhas_precos.items %}
+                                                    <option value="{{key}}">
+                                                        {{value}}
+                                                    </option>
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-success btn-block mt-3" type="submit">Pesquisar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <img class="d-block w-100" src="{% static 'img/showcase.jpg' %}" height="530" alt="Six slide">
+        </div>
+
+        <div class="carousel-item">
+            <div class="carousel-caption trickcenter">
+                <!-- Showcase -->
+                <section id="showcase">
+                    <div class="container text-center bg-dark p-3">
+                        <div class="home-search">
+                            <div class="overlay py-2">
+                                <h1 class="display-4">
+                                    Encontre aqui o imóvel que você precisa em Urubici e região!
+                                </h1>
+                                <br>
+                                <p class="lead">Transformando seus sonhos em realidade!</p>
+                                <div class="search">
+                                    <form action="{% url 'pesquisar' %}">
+                                        <!-- Form Row 1 -->
+                                        <div class="form-row">
+                                            <div class="col-md-4 mb-3">
+                                                <label class="sr-only">Palavras Chaves</label>
+                                                <input type="text" name="keywords" class="form-control"
+                                                    placeholder="Palavras Chaves (Chácara, Hectares, etc)">
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label class="sr-only">Cidade</label>
+                                                <input type="text" name="cidade" class="form-control"
+                                                    placeholder="Cidade">
+                                            </div>
+
+                                            <div class="col-md-4 mb-3">
+                                                <label class="sr-only">Preço</label>
+                                                <select name="preco" class="form-control">
+                                                    <option selected="true" disabled="disabled">Preço Máximo
+                                                    </option>
+                                                    {% for key,value in escolhas_precos.items %}
+                                                    <option value="{{key}}">
+                                                        {{value}}
+                                                    </option>
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-success btn-block mt-3" type="submit">Pesquisar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <img class="d-block w-100" src="{% static 'img/showcase.jpg' %}" height="530" alt="First slide">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+</body>

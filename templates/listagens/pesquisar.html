@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{% block content %}
+<title> {% block title %} Corvo Branco Imóveis - Pesquisar {% endblock %}</title>
+
+<section id="showcase-inner" class="showcase-search text-white py-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-12">
+                <form action="{% url 'pesquisar' %}">
+                    <!-- Form Row 1 -->
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label class="sr-only">Palavras Chaves</label>
+                            <input type="text" name="keywords" class="form-control"
+                                placeholder="Palavras Chaves (Chácara, Fazenda, Casa etc)">
+                        </div>
+                        <div class="col-md-2 mb-3">
+                            <label class="sr-only">Tipo Imóvel</label>
+                            <select name="tipo_de_imovel" class="form-control">
+                                <option selected="true" disabled="disabled">Tipo Imóvel</option>
+                                {% for key,value in escolhas_imoveis.items %}
+                                <option value="{{key}}">
+                                    {{value}}
+                                </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="col-md-2 mb-3">
+                            <label class="sr-only">Cidade</label>
+                            <select name="cidade" class="form-control">
+                                <option selected="true" disabled="disabled">Cidade</option>
+                                {% for key,value in escolhas_cidades.items %}
+                                <option value="{{key}}">
+                                    {{value}}
+                                </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-3">
+                            <label class="sr-only">Preço</label>
+                            <select name="preco" class="form-control">
+                                <option selected="true" disabled="disabled">Preço Máximo</option>
+                                {% for key,value in escolhas_precos.items %}
+                                <option value="{{key}}">
+                                    {{value}}
+                                </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-success btn-block" type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="{% url 'index' %}">
+                        <i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="">Pesquisa de Listagens</a>
+                </li>
+                <li class="breadcrumb-item active"> Resultados</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+<!-- Listings -->
+<section id="listings" class="py-4">
+    <div class="container">
+        <div class="row">
+
+            {% if listagens %} {% for listagem in listagens %}
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card listing-preview">
+                    <img class="card-img-top" src="{{listagem.foto_principal.url }}" alt=""  height="230">
+                    <div class="card-img-overlay">
+                        <h2>
+                            <span class="badge badge-success text-white">${{listagem.preco | intcomma}} </span>
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="listing-heading text-center">
+                            <h4 class="text-primary">{{listagem.tipo_de_imovel}}</h4>
+                            <p>
+                                <i class="fas fa-map-marker text-secondary"></i> {{listagem.titulo}}
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="row py-2 text-secondary">
+                            <div class="col-6">
+                                <i class="fas fa-th-large"></i> Tamanho da Área: {{listagem.tamanho_terreno}}
+                            </div>
+                            <div class="col-6">
+
+                                <i class="fas fa-vector-square"></i> Hectares: {{listagem.hectares}}
+                            </div>
+                        </div>
+                        <div class="row py-2 text-secondary">
+                            <div class="col-6 text-capitalize">
+                                <i class="fas fa-city "></i> Cidade: {{listagem.cidade}}
+                            </div>
+                            <div class="col-6">
+                                <i class="fas fa-money-bill"></i> R$ {{listagem.preco | intcomma }}
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row text-center">
+                            <div class="col-12">
+                                <i class="fas fa-user"></i> <b> {{listagem.Corretor}} </b>
+                                <small>(49) 9 9999-9999</small>
+                            </div>
+                        </div>
+                        <hr>
+                        <a href="{% url 'listagem' listagem.id %}" class="btn btn-primary btn-block">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %} {% else %}
+            <div class="col-md-12">
+                <h1 class="display-6 text-center">Não possuímos listagens com esses dados</h1>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

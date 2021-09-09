@@ -1,0 +1,199 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load humanize %}
+{% load embed_video_tags %}
+<title> {% block title %} Corvo Branco Imóveis - Listagens {% endblock %}</title>
+
+<body>
+
+    <section id="showcase-inner" class="py-5 text-white">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h1 class="display-4 text-white">{{listagem.tipo_de_imovel}}</h1>
+                    <p class="lead text-white">
+                        <i class="fas fa-map-marker "> </i> <span class="text-capitalize">{{listagem.cidade}}</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <section id="bc" class="mt-3">
+        <div class="container">
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="{% url 'listar' %}">Lista de Imóveis</a>
+                    </li>
+                    <li class="breadcrumb-item active text-capitalize">{{listagem.cidade}}</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+    <!-- Listing -->
+    <section id="listing" class="py-4">
+        <div class="container">
+            <a href="{% url 'listar' %}" class="btn btn-secondary mb-3">Voltar</a>
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Home Main Image -->
+                    <img src="{{listagem.foto_principal.url}}" alt="" class="img-main img-fluid mb-3">
+                    <!-- Thumbnails -->
+                    <div class="row mb-5 thumbs">
+                        {% if listagem.foto_1 %}
+                        <div class="col-md-2 mb-1">
+                            <a href="{{listagem.foto_1.url}}" data-lightbox="home-images">
+                                <img src="{{listagem.foto_1.url}}" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        {% endif %}
+                        {% if listagem.foto_2 %}
+                        <div class="col-md-2 mb-1">
+                            <a href="{{listagem.foto_2.url}}" data-lightbox="home-images">
+                                <img src="{{listagem.foto_2.url}}" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        {% endif %}
+
+                        {% if listagem.foto_3 %}
+                        <div class="col-md-2 mb-1">
+                            <a href="{{listagem.foto_3.url}}" data-lightbox="home-images">
+                                <img src="{{listagem.foto_3.url}}" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        {% endif %}
+
+                        {% if listagem.foto_4 %}
+                        <div class="col-md-2 mb-1">
+                            <a href="{{listagem.foto_4.url}}" data-lightbox="home-images">
+                                <img src="{{listagem.foto_4.url}}" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        {% endif %}
+                        {% if listagem.foto_5 %}
+                        <div class="col-md-2 mb-1">
+                            <a href="{{listagem.foto_5.url}}" data-lightbox="home-images">
+                                <img src="{{listagem.foto_5.url}}" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        {% endif %}
+                        {% if listagem.foto_6 %}
+                        <div class="col-md-2 mb-1">
+                            <a href="{{listagem.foto_6.url}}" data-lightbox="home-images">
+                                <img src="{{listagem.foto_6.url}}" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        {% endif %}
+
+                        {% if listagem.foto_7 %}
+                        <div class="col-md-2 mb-1">
+                            <a href="{{listagem.foto_7.url}}" data-lightbox="home-images">
+                                <img src="{{listagem.foto_7.url}}" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        {% endif %}
+
+                        {% if listagem.foto_8 %}
+                        <div class="col-md-2 mb-1">
+                            <a href="{{listagem.foto_8.url}}" data-lightbox="home-images">
+                                <img src="{{listagem.foto_8.url}}" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        {% endif %}
+
+                        {% if listagem.foto_9 %}
+                        <div class="col-md-2 mb-1">
+                            <a href="{{listagem.foto_9.url}}" data-lightbox="home-images">
+                                <img src="{{listagem.foto_9.url}}" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        {% endif %}
+
+                        {% if listagem.foto_10 %}
+                        <div class="col-md-2 mb-1">
+                            <a href="{{listagem.foto_10.url}}" data-lightbox="home-images">
+                                <img src="{{listagem.foto_10.url}}" alt="imagem10" class="img-fluid">
+                            </a>
+                        </div>
+                        {% endif %}
+
+                    </div>
+
+
+
+                    <!-- Fields -->
+                    <div class="row mb-5 fields">
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item text-secondary">
+                                    <i class="fas fa-money-bill-alt"></i> Preço:
+                                    <span class="float-right">R${{listagem.preco | intcomma}}</span>
+                                </li>
+                                <li class="list-group-item text-secondary">
+                                    <i class="fas fa-city"></i> Cidade:
+                                    <span class="float-right text-capitalize">{{listagem.cidade}}</span>
+                                </li>
+                                <li class="list-group-item text-secondary">
+                                    <i class="fas fa-money-bill-alt"></i> Tipo de Imóvel:
+                                    <span class="float-right">{{listagem.tipo_de_imovel}}</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item text-secondary">
+                                    <i class="fas fa-th-large"></i> Metros Quadrados:
+                                    <span class="float-right">{{listagem.tamanho_terreno}}</span>
+                                </li>
+                                <li class="list-group-item text-secondary">
+                                    <i class="fas fa-vector-square"></i> Hectares:
+                                    <span class="float-right">{{listagem.hectares}}
+                                    </span>
+                                </li>
+                                <li class="list-group-item text-secondary">
+                                    <i class="fas fa-user"></i> Corretor:
+                                    <span class="float-right">{{listagem.Corretor}}
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                {% if listagem.video1 and listagem.video2 %}
+                                {% video listagem.video1 '320 x 320' %}
+                            </div>
+                            <div class="col-sm-6">
+                                {% video listagem.video2 '320 x 320' %}
+                            </div>
+                        </div>
+                        {% else %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Descrição:</h2>
+                    <hr>
+                    <p class="lead">
+                        {{listagem.descricao}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+</body>
+{% endblock %}

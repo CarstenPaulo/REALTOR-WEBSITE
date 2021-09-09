@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<head>
+<title> {% block title %} Corvo Branco Imóveis - Sobre {% endblock %}</title>
+</head>
+
+<body>
+
+    {% block content %}
+
+</body>
+
+
+<section id="about" class="py-4">
+    <div class="container">
+        <h2 class="text-center mb-4 font-weight-bold ">SOBRE NÓS</h2>
+        <div class="row text-center">
+            <div class="col-md-12">
+                <img src="{% static 'img/about.jpg' %}" class="img-thumbnail" alt="...">
+                <p class="mt-2"></p>
+                <span class="lead">officia
+                    repudiandae ad saepe ex, amet
+                    neque quod accusamus rem quia magnam magni dolorum facilis ullam minima perferendis? Exercitatione
+                    commodi id libero eveniet harum perferendis laborum molestias quia.
+                    neque quod accusamus rem quia magnam magni dolorum facilis ullam minima perferendis? Exercitationem
+                    at quaerat</span>
+            </div>
+        </div>
+</section>
+
+
+<section id="missao" class="py-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <img src="{% static 'img/visao.png' %}" width="220" class="img-thumbnail" alt="...">
+                <p class="lead text-center mt-2">Visão</p>
+                <span class="none">Ser referência no mercado imobiliário em Urubici e região, com as melhores oportunidades de investimento em toda a Serra Catarinense.
+                </span>
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'img/missao.png' %}" width="220" class="img-thumbnail" alt="...">
+                <p class="lead text-center mt-2">Missão</p>
+                <span class="none">Provomer um ótimo atendimento e participar da realização dos sonhos dos nossos clientes, através da qualidade de serviço prestado em toda a negociação.
+                </span>
+            </div>
+
+            <div class="col-md-4">
+                <img src="{% static 'img/valoress.png' %}" width="220" class="img-thumbnail" alt="...">
+                <p class="lead text-center mt-2">Valores</p>
+                <span class="none">Ética e respeito para oferecer o melhor custo benefício e serviços de qualidade para clientes e parceiros.
+            </div>
+        </div>
+</section>
+
+<!-- Team -->
+<section id="team" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Nossa Equipe</h2>
+        <div class="row text-center font-weight-bold">
+            {% if corretores %}
+            {% for corretores in corretores %}
+            <div class="col-md-6">
+                <img src="{{corretores.foto.url}}" alt="" class="img-thumbnail" width="250">
+                <h4 class="lead mt-2">{{corretores.nome}}</h4>
+                <hr>
+                <p>
+                    <i class="fas fa-phone"></i> {{corretores.telefone}}
+                </p>
+                <p>
+                    <i class="fas fa-envelope-open "></i> {{corretores.email}}
+                </p>
+                <p>
+                    <i class="fas fa-award text-success"></i> CRECI: {{corretores.creci }}
+                </p>
+            </div>
+            {% endfor %}
+            {% else %}
+            <div class="col-md-12">
+                <h1 class="display-6 text-center">Não possuímos corretores cadastrados no momento</h1>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+
+
+</html>

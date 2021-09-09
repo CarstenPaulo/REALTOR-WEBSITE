@@ -1,0 +1,13 @@
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+media
+virtual
+DATABASES
+d1sarcbvtev6vc
+/static
+*.d1sarcbvtev6vc
+/d1sarcbvtev6vc
