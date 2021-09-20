@@ -11,10 +11,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ke)6i+^q3=c#7sye08)_&(h0_kif7e-5h_72uqd(99yjh0esdh'
 
 
-DEBUG = True
+DEBUG = False
 
 
-ALLOWED_HOSTS = ['127.0.0.1','corvobrancoimoveis.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','corvobrancoimoveis.herokuapp.com','www.carstenpaulo.com','carstenpaulo.com']
 
 
 
