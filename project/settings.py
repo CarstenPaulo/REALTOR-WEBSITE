@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-ke)6i+^q3=c#7sye08)_&(h0_kif7e-5h_72uqd(99yjh0esdh
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['127.0.0.1','*','https://corvobrancoimoveis.herokuapp.com/','www.corvobrancoimoveis.herokuapp.com','http://www.corvobrancoimoveis.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','https://corvobrancoimoveis.herokuapp.com/','www.corvobrancoimoveis.herokuapp.com','http://www.corvobrancoimoveis.herokuapp.com']
 
 
 
