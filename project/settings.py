@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ke)6i+^q3=c#7sye08)_&(h0_kif7e-5h_72uqd(99yjh0esdh'
 
 
-DEBUG = False
+DEBUG = True
 
 
 ALLOWED_HOSTS = ['127.0.0.1','corvobrancoimoveis.herokuapp.com','www.carstenpaulo.com','carstenpaulo.com','www.corvobrancoimobiliaria.com.br','corvobrancoimobiliaria.com.br']
@@ -133,11 +133,7 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-
-
-
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -165,3 +161,7 @@ CLOUDINARY_STORAGE = {
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
+SESSION_COOKIE_AGE = 5
+LOGOUT_REDIRECT_URL  = 'index'
