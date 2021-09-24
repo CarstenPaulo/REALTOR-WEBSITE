@@ -163,5 +163,4 @@ CLOUDINARY_STORAGE = {
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
-SESSION_COOKIE_AGE = 5
 LOGOUT_REDIRECT_URL  = 'index'
