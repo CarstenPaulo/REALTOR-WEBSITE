@@ -14,10 +14,10 @@ SECRET_KEY = 'django-insecure-ke)6i+^q3=c#7sye08)_&(h0_kif7e-5h_72uqd(99yjh0esdh
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['127.0.0.1','corvobrancoimoveis.herokuapp.com','www.carstenpaulo.com','carstenpaulo.com','www.corvobrancoimobiliaria.com.br','corvobrancoimobiliaria.com.br']
+ALLOWED_HOSTS = ['127.0.0.1','corvobrancoimoveis.herokuapp.com','www.carstenpaulo.com','carstenpaulo.com','www.corvobrancoimobiliaria.com.br','corvobrancoimobiliaria.com.br','reservasurubici.com.br','www.reservasurubici.com.br']
 
 
-
+  
 INSTALLED_APPS = [
     'django.contrib.admin', 
     'django.contrib.auth',
