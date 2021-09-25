@@ -167,15 +167,16 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-6">
-                                {% if listagem.video1 and listagem.video2 %}
+                                {% if listagem.video1  %}
                                 {% video listagem.video1 '320 x 320' %}
+                                {% endif% }
                             </div>
                             <div class="col-sm-6">
+                                {% if listagem.video2 %}
                                 {% video listagem.video2 '320 x 320' %}
+                                {% endif %}
                             </div>
                         </div>
-                        {% else %}
-                        {% endif %}
                     </div>
                 </div>
             </div>
