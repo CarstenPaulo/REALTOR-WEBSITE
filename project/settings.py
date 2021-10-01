@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-ke)6i+^q3=c#7sye08)_&(h0_kif7e-5h_72uqd(99yjh0esdh
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['127.0.0.1','corvobrancoimoveis.herokuapp.com','www.corvobrancoimobiliaria.com.br','corvobrancoimobiliaria.com.br']
+ALLOWED_HOSTS = ['127.0.0.1','corvobrancoimoveis.herokuapp.com','www.corvobrancoimobiliaria.com.br','corvobrancoimobiliaria.com.br','*.corvobrancoimobiliaria.com.br']
 
 
   
@@ -46,6 +46,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
 
 ROOT_URLCONF = 'project.urls'
 
