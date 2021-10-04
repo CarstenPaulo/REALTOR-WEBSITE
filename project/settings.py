@@ -1,3 +1,4 @@
+from collections import defaultdict
 import os
 from pathlib import Path
 from decouple import config
@@ -140,8 +141,12 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'corvobrancoimoveis@gmail.com'
-EMAIL_HOST_PASSWORD = 'imobiliaria2021'
+EMAIL_HOST_USER = {
+
+'EMAIL_HOST_USER' : config('EMAIL_HOST_USER', default="corvobrancoimoveis@gmail.com"),
+'EMAIL_HOST_PASSWORD' : config('EMAIL_HOST_PASSWORD', default= 'imobiliaria2021')
+}
+
 EMAIL_PORT = 587
 
 
