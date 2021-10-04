@@ -137,22 +137,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
-
-EMAIL_DATA = {
-    'EMAIL_BACKEND': config('EMAIL_BACKEND', default = 'django.core.mail.backends.smtp.EmailBackend'),
-    'EMAIL_USE_TLS': config('EMAIL_USE_TLS ', default= True),
-    'EMAIL_HOST':config('EMAIL_HOST ', default= 'smtp.gmail.com'),
-    'EMAIL_HOST_USER':config('EMAIL_HOST_USER',default = 'corvobrancoimoveis@gmail.com'),
-    'EMAIL_HOST_PASSWORD':config('EMAIL_HOST_PASSWORD', default = 'imobiliaria2021'),
-    'EMAIL_PORT':config('EMAIL_PORT', default = 587),
-}
-
-
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': config('CLOUD_NAME', default="corvobrancoimoveis"),
-    'API_KEY': config('API_KEY', default="985696424584293"),
-    'API_SECRET': config('API_SECRET', default="D9CXFQF1sXw7RKg7i_IkDyn7Ub0"),
-}
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'corvobrancoimoveis@gmail.com'
+EMAIL_HOST_PASSWORD = 'imobiliaria2021'
+EMAIL_PORT = 587
 
 
 
