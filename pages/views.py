@@ -65,10 +65,9 @@ def faleconosco(request):
         send_mail(context['nome'],dados, '', ['corvobrancoimoveis@gmail.com'])
         messages.success(request, 'Email enviado com sucesso')
         form=contatoemail()
-
-
         
     return render(request, 'faleconosco.html',{'form':form})
+
 
 
 def anuncieaqui(request):
