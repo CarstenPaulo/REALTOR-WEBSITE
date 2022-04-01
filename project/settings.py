@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-ke)6i+^q3=c#7sye08)_&(h0_kif7e-5h_72uqd(99yjh0esdh
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['127.0.0.1','corvobrancoimoveis.herokuapp.com','www.corvobrancoimobiliaria.com.br','corvobrancoimobiliaria.com.br','*.corvobrancoimobiliaria.com.br','*.douglasrodriguesimoveis.com.br','www.douglasrodriguesimoveis.com.br','douglasrodriguesimoveis.com.br']
+ALLOWED_HOSTS = ['127.0.0.1','*.douglasrodriguesimoveis.com.br','www.douglasrodriguesimoveis.com.br','douglasrodriguesimoveis.com.br']
 
 
   
@@ -77,16 +77,20 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd2k4barqnfk36b',
-        'HOST':'ec2-18-209-143-227.compute-1.amazonaws.com',
+
+        'NAME': 'dc8qffh2dc6npd',
+
+        'HOST':'ec2-54-160-109-68.compute-1.amazonaws.com',
         'PORT':'5432',
-        'USER':'pdykeywsgohwch',
-        'PASSWORD':'e917b83ce2380716c107360bcdce8778fe51adccda5e368009f3d9203c239485',
+
+        'USER':'vzkjkxftvgtsku',
+
+        'PASSWORD':'8bf1733e40b898679817974547b91883b95cd831864947f67057230bf5c8d36c',
         
     }
 }
 
-
+#postgres://vzkjkxftvgtsku:8bf1733e40b898679817974547b91883b95cd831864947f67057230bf5c8d36c@/dc8qffh2dc6npd
 
 
 AUTH_PASSWORD_VALIDATORS = [
