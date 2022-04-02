@@ -62,10 +62,9 @@ def faleconosco(request):
 
         
         '''.format(context['nome'],context['sobrenome'],context['telefone'],context['email'],context['assunto'])
-        send_mail(context['nome'],dados, '', ['corvobrancoimoveis@gmail.com'])
-        messages.success(request, 'Email enviado com sucesso')
+        send_mail(context['nome'],dados, '', ['corvobrancoimobiliaria@gmail.com'])
+        messages.success(request, 'Email enviado com sucesso,')
         form=contatoemail()
-        
     return render(request, 'faleconosco.html',{'form':form})
 
 
@@ -106,7 +105,7 @@ def anuncieaqui(request):
 
         
         '''.format(context['nome'],context['sobrenome'],context['telefone'],context['email'],context['assunto'])
-        send_mail(context['nome'],dados, '', ['corvobrancoimoveis@gmail.com'])
+        send_mail(context['nome'],dados, '', ['corvobrancoimobiliaria@gmail.com'])
         messages.success(request, 'Email enviado com sucesso')
         form=contatoemail()
     return render(request, 'anuncieaqui.html',{'form':form})

@@ -34,15 +34,15 @@
 
 
 <div class="container mt-4">
-    <h1 class="display-5 text-success text-center">
-        {% if messages %}
-        <ul class="messages">
-            {% for message in messages %}
-            <b {% if message.tags %} class="alert alert-success" {% endif %}>{{ message }}</b>
-            {% endfor %}
-        </ul>
-        {% endif %}
-    </h1>
+    <p>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Hey!</strong> {{message}}
+    </div>
+    {% endfor %}
+    {% endif %}
+    </p>
 </div>
 
 
