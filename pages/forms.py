@@ -8,8 +8,8 @@ from django.forms.widgets import NumberInput, TextInput, Textarea
 class contatoemail(forms.Form):
     nome = forms.CharField(widget=TextInput(attrs={'placeholder':'Nome'}))
     sobrenome = forms.CharField(widget=TextInput(attrs={'placeholder':'Sobrenome'}))
-    telefone = CharField(widget=NumberInput(
-        attrs={'placeholder': '(DDD) 9 9999-9999'}))
+    telefone = CharField(widget=forms.TextInput(
+        attrs={'data-mask':"(00)-00000-0000"}))
     email = forms.EmailField(widget=TextInput(attrs={'placeholder': 'Email'}))
     assunto = forms.CharField(widget=Textarea(attrs={'placeholder': 'Assunto'}))
    
