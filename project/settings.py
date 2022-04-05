@@ -149,6 +149,8 @@ EMAIL_HOST_USER = 'corvobrancoimobiliaria@gmail.com'
 EMAIL_HOST_PASSWORD = 'eeicpdmdiqbosvpj'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'corvobrancoimobiliaria@gmail.com'
+
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
