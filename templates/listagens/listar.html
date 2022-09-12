@@ -31,66 +31,6 @@
     </div>
 </section>
 
-<!-- Listings -->
-<section id="listings" class="py-4">
-    <div class="container">
-        <div class="row">
-            {% if listagens %} {% for listagem in listagens %}
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card listing-preview">
-                    <img class="card-img-top" src="{{listagem.foto_principal.url }}" alt="foto principal"  height="230">
-                    <div class="card-img-overlay">
-                        <h2>
-                            <span class="badge badge-success text-white">R${{listagem.preco | intcomma}} </span>
-                        </h2>
-                    </div>
-                    <div class="card-body">
-                        <div class="listing-heading text-center">
-                            <h4 class="text-primary">{{listagem.tipo_de_imovel}}</h4>
-                            <p>
-                                <i class="fas fa-map-marker text-secondary"></i> {{listagem.titulo}}
-                            </p>
-                        </div>
-                        <hr>
-                        <div class="row py-2 text-secondary">
-                            <div class="col-6">
-                                <i class="fas fa-th-large"></i> Metros Quadrado: {{listagem.tamanho_terreno}}
-                            </div>
-                            <div class="col-6">
-
-                                <i class="fas fa-vector-square"></i> Hectares: {{listagem.hectares}}
-                            </div>
-                        </div>
-                        <div class="row py-2 text-secondary">
-                            <div class="col-6">
-                                <i class="fas fa-city"></i> Cidade: <span class=" text-capitalize"> {{listagem.cidade}}</span>
-                            </div>
-                            <div class="col-6">
-                                <i class="fas fa-money-bill"></i> R$ {{listagem.preco | intcomma }}
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row text-center">
-                            <div class="col-12">
-                                <i class="fas fa-user"></i> <b> {{listagem.Corretor}} </b>
-                                <small>(49) 9 9999-9999</small>
-                            </div>
-                        </div>
-                        <hr>
-                        <a href="{% url 'listagem' listagem.id %}" class="btn btn-primary btn-block">Saiba Mais</a>
-                    </div>
-                </div>
-            </div>
-
-            {% endfor %} {% else %}
-
-
-            <div class="col-md-12">
-                <h1 class="display-6 text-center">Não Possuímos Listagens com esses dados</h1>
-            </div>
-        </div>
-    </div>
-    {% endif %}
     <!-- Listing 1 -->
     <div class="container">
         <div class="row">
@@ -123,6 +63,77 @@
                 </ul>
                 {% endif %}
             </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section id="listings" class="py-5">
+    <div class="container">
+        <h1 class="mb-4 text-center font-weight-bold">IMÓVEIS A VENDA</h1>
+        <div class="row">
+            {% if listagens %} {% for listagem in listagens %}
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card listing-preview">
+                    <img class="card-img-top" src="{{listagem.foto_principal.url}}" alt="foto principal" height="230">
+                    <div class="card-img-overlay">
+                        <h2>
+                            <span class="badge badge-dark float-right text-light"> R$ {{listagem.preco|intcomma}}</span>
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="listing-heading text-center">
+                            <a href="{% url 'listagem' listagem.id %}">
+                                <h4 class="text-primary">{{listagem.tipo_de_imovel}}</h4>
+                            </a>
+                            <p>
+                                <i class="fas fa-map-marker text-capitalize"> {{listagem.cidade}}</i>
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="row py-2 text-secondary">
+                            <div class="col-6">
+                                <i class="fas fa-th-large text-primary"></i>
+                                <span class="font-weight-bold text-dark ">
+                                    {{listagem.metrosquadrados}}
+                                    m²
+                                </span>
+
+                            </div>
+                            <div class="col-6">
+                                <i class="fas fa-vector-square text-info"></i>
+                                <span class="font-weight-bold text-dark">
+                                    {{listagem.hectares}} Hectares
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row py-2 text-center">
+                            <div class="col-12">
+                                <i class="fas fa-money-bill text-success"></i>
+                                <span class="font-weight-bold text-dark">
+                                    R$ {{listagem.preco | intcomma }}
+                                </span>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row text-center">
+                            <div class="col-md-12">
+                                <i class="fas fa-user"></i> <b> {{listagem.Corretor}} </b>
+                                <small>{{listagem.Corretor.telefone}}</small>
+                            </div>
+                        </div>
+                        <hr>
+                        <a href="{% url 'listagem' listagem.id %}" class="btn btn-primary btn-block">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %} {% else %}
+            <div class="col-md-12">
+                <h1 class="display-6 text-center">Não possuímos imóveis cadastrados no momento</h1>
+            </div>
+            {% endif %}
         </div>
     </div>
 </section>

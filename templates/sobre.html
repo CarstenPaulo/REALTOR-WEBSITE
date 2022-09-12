@@ -2,7 +2,7 @@
 {% load static %}
 
 <head>
-<title> {% block title %} Sobre {% endblock %}</title>
+    <title> {% block title %} Sobre {% endblock %}</title>
 </head>
 
 <body>
@@ -19,10 +19,15 @@
             <div class="col-md-12">
                 <img src="{% static 'img/about.jpg' %}" class="img-thumbnail" alt="...">
                 <p class="mt-2"></p>
-                <span class="lead">Com mais de 5 anos na área de imóveis, nós estamos aqui para te ajudar a encontrar o lugar perfeito para você morar,
-                    venha conosco nessa caminhada!Com mais de 5 anos na área de imóveis, nós estamos aqui para te ajudar a encontrar o lugar perfeito para você morar,
-                    venha conosco nessa caminhada!Com mais de 5 anos na área de imóveis, nós estamos aqui para te ajudar a encontrar o lugar perfeito para você morar,
-                    venha conosco nessa caminhada!
+                <span class="lead">
+                    Com mais de 10 anos de experiência e tradição nas negociações de venda de imóveis, referência no
+                    mercado imobiliário de Urubici e região. A empresa conta com profissionais altamente qualificados e
+                    com ampla experiência no mercado imobiliário, prontos para
+                    localizar as melhores oportunidades de negócio para seus clientes/parceiros.
+                    <h2 class="mt-4"> Serviços</h2>
+                    <p class="font-weight-bold"> Venda de Imóveis</p>
+                    <p class="font-weight-bold"> Reguralização </p>
+                    <p class="font-weight-bold"> Administração de Imóveis</p>
                 </span>
             </div>
         </div>
@@ -35,20 +40,23 @@
             <div class="col-md-4">
                 <img src="{% static 'img/visao.png' %}" width="220" class="img-thumbnail" alt="...">
                 <p class="lead text-center mt-2">Visão</p>
-                <span class="none">Ser referência no mercado imobiliário em Urubici e região, com as melhores oportunidades de investimento em toda a Serra Catarinense.
+                <span class="none">Ser referência no mercado imobiliário em Urubici e região, com as melhores
+                    oportunidades de investimento em toda a Serra Catarinense.
                 </span>
             </div>
             <div class="col-md-4">
                 <img src="{% static 'img/missao.png' %}" width="220" class="img-thumbnail" alt="...">
                 <p class="lead text-center mt-2">Missão</p>
-                <span class="none">Provomer um ótimo atendimento e participar da realização dos sonhos dos nossos clientes, através da qualidade de serviço prestado em toda a negociação.
+                <span class="none">Provomer um ótimo atendimento e participar da realização dos sonhos dos nossos
+                    clientes, através da qualidade de serviço prestado em toda a negociação.
                 </span>
             </div>
 
             <div class="col-md-4">
                 <img src="{% static 'img/valoress.png' %}" width="220" class="img-thumbnail" alt="...">
                 <p class="lead text-center mt-2">Valores</p>
-                <span class="none">Ética e respeito para oferecer o melhor custo benefício e serviços de qualidade para clientes e parceiros.
+                <span class="none">Ética e respeito para oferecer o melhor custo benefício e serviços de qualidade para
+                    clientes e parceiros.
             </div>
         </div>
 </section>
@@ -67,7 +75,7 @@
                 <p>
                     <i class="fas fa-phone"></i> {{corretores.telefone}}
                 </p>
-               
+
                 <p>
                     <i class="fas fa-award text-success"></i> CRECI: {{corretores.creci }}
                 </p>

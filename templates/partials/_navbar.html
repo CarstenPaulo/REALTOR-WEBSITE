@@ -1,32 +1,33 @@
 {% load static %}
 
 
+
+
 <nav style="background-color: #081423;" class="navbar navbar-expand-sm navbar-light  ">
     <div class="container">
-        <a href="{% url 'index' %}">
-            <img src="{% static 'img/logow-rm-bg.png' %}" height="75" alt="douglasrodriguesimoveis"></a>
+        <a class="mb-2" href="{% url 'index' %}">
+            <img src="{% static 'img/logo-removebg-preview.png' %}" height="100" alt="douglasrodriguesimoveis"></a>
         </a>
-        <button style="background-color: white;" class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+        <button style="background-color: white;" class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+            data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                 <li class="nav-item  ml-auto">
-                    <a class="nav-link text-white" href="{% url 'index' %}">Inicio <span
-                            class="sr-only">(current)</span></a>
+                    <a class="nav-link text-white font-weight-bold" href="{% url 'index' %}">INICIO <span
+                            class="sr-only"></span></a>
                 </li>
                 <li class="nav-item  ml-auto">
-                    <a class="nav-link  text-white" href="{% url 'listar' %}">Imóveis</a>
+                    <a class="nav-link  text-white font-weight-bold" href="{% url 'listar' %}">IMÓVEIS</a>
                 </li>
                 <li class="nav-item  ml-auto">
-                    <a class="nav-link  text-white" href="{% url 'sobre' %}">Sobre</a>
+                    <a class="nav-link  text-white font-weight-bold" href="{% url 'sobre' %}">SOBRE</a>
                 </li>
                 <li class="nav-item  ml-auto">
-                    <a class="nav-link  text-white" href="{% url 'faleconosco' %}">Fale Conosco</a>
-                </li>
-                <li class="nav-item  ml-auto">
-                    <a class="nav-link  text-white" href="{% url 'anuncieaqui' %}">Anuncie Conosco</a>
+                    <a class="nav-link  text-white font-weight-bold" href="{% url 'faleconosco' %}">FALE CONOSCO & ANUNCIE AQUI
+                    </a>
                 </li>
             </ul>
         </div>
